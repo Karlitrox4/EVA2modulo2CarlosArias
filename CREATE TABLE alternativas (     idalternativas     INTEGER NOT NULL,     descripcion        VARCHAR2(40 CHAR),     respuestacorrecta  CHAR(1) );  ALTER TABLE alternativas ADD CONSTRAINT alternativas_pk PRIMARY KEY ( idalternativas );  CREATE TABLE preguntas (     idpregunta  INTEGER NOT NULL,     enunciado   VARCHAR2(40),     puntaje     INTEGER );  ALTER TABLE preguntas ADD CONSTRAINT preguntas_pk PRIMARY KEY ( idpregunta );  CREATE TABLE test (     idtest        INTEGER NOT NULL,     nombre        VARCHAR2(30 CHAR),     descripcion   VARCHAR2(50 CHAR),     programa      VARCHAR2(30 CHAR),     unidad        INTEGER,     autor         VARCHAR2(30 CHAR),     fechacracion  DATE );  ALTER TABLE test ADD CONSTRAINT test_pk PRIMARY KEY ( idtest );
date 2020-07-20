@@ -1,0 +1,28 @@
+CREATE TABLE alternativas (
+    idalternativas     INTEGER NOT NULL,
+    descripcion        VARCHAR2(40 CHAR),
+    respuestacorrecta  CHAR(1)
+);
+
+ALTER TABLE alternativas ADD CONSTRAINT alternativas_pk PRIMARY KEY ( idalternativas );
+
+CREATE TABLE preguntas (
+    idpregunta  INTEGER NOT NULL,
+    enunciado   VARCHAR2(40),
+    puntaje     INTEGER
+);
+
+ALTER TABLE preguntas ADD CONSTRAINT preguntas_pk PRIMARY KEY ( idpregunta );
+
+CREATE TABLE test (
+    idtest        INTEGER NOT NULL,
+    nombre        VARCHAR2(30 CHAR),
+    descripcion   VARCHAR2(50 CHAR),
+    programa      VARCHAR2(30 CHAR),
+    unidad        INTEGER,
+    autor         VARCHAR2(30 CHAR),
+    fechacracion  DATE
+);
+
+ALTER TABLE test ADD CONSTRAINT test_pk PRIMARY KEY ( idtest );
+
